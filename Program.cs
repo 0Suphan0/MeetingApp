@@ -5,6 +5,9 @@ builder.Services.AddControllersWithViews();  // boþ projeye mvc yapýsýný dahil e
 
 var app = builder.Build();
 
+app.UseStaticFiles();
+app.UseRouting();
+
 
 //app.MapDefaultControllerRoute();
 app.MapControllerRoute(
