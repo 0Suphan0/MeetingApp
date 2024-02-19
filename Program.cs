@@ -1,10 +1,16 @@
 var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
 
 builder.Services.AddControllersWithViews();  // boþ projeye mvc yapýsýný dahil ettik..
 
-app.MapGet("/", () => "Hello World!");
-app.MapGet("/abc", () => "Hello World!");
+
+var app = builder.Build();
+
+
+//app.MapDefaultControllerRoute();
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}"
+    );
 
 
 app.Run();
