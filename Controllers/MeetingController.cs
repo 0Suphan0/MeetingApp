@@ -14,6 +14,13 @@ namespace MeetingApp.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Apply(string Name, string Phone, string Email, bool WillAttend)
+        {
+            Console.WriteLine(Name);
+            return View();
+        }
+
         public IActionResult List()
         {
             return View();
