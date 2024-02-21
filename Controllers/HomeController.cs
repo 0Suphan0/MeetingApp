@@ -19,7 +19,6 @@ namespace MeetingApp.Controllers
             int saat = DateTime.Now.Hour;
             string title=saat < 12 ? "Günaydın" : "İyi Günler";
             ViewBag.header = title;
-            ViewBag.User = "Süphan";
             return View(meetingInfo);
         }
     }

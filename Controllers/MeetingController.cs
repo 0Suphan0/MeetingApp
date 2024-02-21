@@ -5,7 +5,7 @@ namespace MeetingApp.Controllers
 {
     public class MeetingController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Thanks()
         {
             return View();
         }
@@ -18,8 +18,10 @@ namespace MeetingApp.Controllers
         [HttpPost]
         public IActionResult Apply(UserInfo model)
         {
-            Console.WriteLine(model.Name);
-            return View();
+            Repository.CreateUser(model);
+            ViewBag.UserCount=Repository.Users.Where(i=>i.WillAttend==true).Count();
+
+            return View("Thanks",model);
         }
 
         public IActionResult List()
