@@ -31,7 +31,7 @@
                 Name = "Ayşe",
                 Email = "ayşe@gmail.com",
                 Phone = "05325478545",
-                WillAttend = true
+                WillAttend = false
 
             });
         }

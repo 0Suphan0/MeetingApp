@@ -26,7 +26,9 @@ namespace MeetingApp.Controllers
 
         public IActionResult List()
         {
-            return View();
+            ViewBag.UserCount = Repository.Users.Where(i => i.WillAttend == true).Count();
+
+            return View(Repository.Users);
         }
     }
 }

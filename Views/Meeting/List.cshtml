@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<UserInfo>
+@{
     ViewBag.Title = "Listeleme Sayfası";
 }
 
@@ -14,23 +15,31 @@
 
     </thead>
     <tbody>
-        <tr>
-            <td> Süphan Yakut</td>
-            <td> Evet</td>
-            <td>
-                <a class="btn btn-sm btn-primary" href="#">Detay</a>
-            </td>
-        </tr>
 
-        <tr>
-            <td> Ömer Yakut</td>
-            <td> Hayır</td>
+            @foreach(var user in Model)
+            {
+                var isAttend = user.WillAttend == true ? "Evet" : "Hayır";
+                var className = user.WillAttend == true ? "table-success" : "table-danger";
+
+               
+
+            <tr class="@className">
+            <td> @user.Name</td>
+            <td> @isAttend</td>
             <td>
                 <a class="btn btn-sm btn-primary" href="#">Detay</a>
             </td>
-        </tr>
+             </tr>
+            }
+
+        
         
     </tbody>
 
 </table>
+<div class="card">
+    <div class="card-body">
+            <span>Katılımcı Sayısı: @ViewBag.UserCount</span>
+    </div>
+</div>
 </main>
