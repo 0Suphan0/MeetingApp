@@ -21,14 +21,13 @@ The project is a web application developed using .NET Core MVC. This application
 
 ## Ekran Görüntüleri (Screenshots)
 
-<img src="ProjectSS/1.png" width="300" height="auto>
-<img src="ProjectSS/2.png" width="300" height="auto>
-<img src="ProjectSS/3.png" width="300" height="auto>
-<img src="ProjectSS/4.png" width="300" height="auto>
-<img src="ProjectSS/5.png" width="300" height="auto>
-<img src="ProjectSS/6.png" width="300" height="auto>
-<img src="ProjectSS/7.png" width="300" height="auto>
-<img src="ProjectSS/8.png" width="300" height="auto>
-
+<img src="ProjectSS/1.png" width="auto">
+<img src="ProjectSS/2.png" width="auto">
+<img src="ProjectSS/3.png" width="auto">
+<img src="ProjectSS/4.png" width="auto">
+<img src="ProjectSS/5.png" width="auto">
+<img src="ProjectSS/6.png" width="auto">
+<img src="ProjectSS/7.png" width="auto">
+<img src="ProjectSS/8.png" width="auto">
 
 
