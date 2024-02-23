@@ -3,23 +3,20 @@
 @{
     Layout = "_Layout2";
     ViewBag.Title = "Anasayfa";
+    ViewBag.header = "Toplantı Bilgileri";
 }
 
 <main class="text-center">
-<h1 class="h4">@ViewBag.header</h1>
-<p>Toplantı Katılım Durumunuzu Belirtiniz.</p>
+    <h1 class="h2 mt-4">@ViewBag.header</h1>
+    <p class="lead">Toplantı Katılım Durumunuzu Belirtiniz.</p>
 
-<div class="card my-2">
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item border-1">@Model.Location'da olacak.</li>
-        <li class="list-group-item border-1">@Model.Time.ToString("dd/MM/yyyy HH:mm:ss") tarihinde gerçekleşecektir.</li>
-        <li class="list-group-item border-1">@Model.NumberOfPeople katılımcı katılacaktır.</li>
+    <div class="card my-4 p-3 shadow">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item border-0">@Model.Location'da olacak.</li>
+            <li class="list-group-item border-0">@Model.Time.ToString("dd/MM/yyyy HH:mm:ss") tarihinde gerçekleşecektir.</li>
+            <li class="list-group-item border-0">@Model.NumberOfPeople katılımcı katılacaktır.</li>
+        </ul>
+    </div>
 
-    </ul>
-</div>
-
+    <a class="btn btn-lg btn-primary" asp-controller="Meeting" asp-action="Apply">Başvuru Yap</a>
 </main>
-
-
-
-<a class="btn btn-sm btn-outline-primary" asp-controller="Meeting" asp-action="Apply" >Başvuru Yap</a>

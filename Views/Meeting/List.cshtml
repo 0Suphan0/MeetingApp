@@ -4,42 +4,38 @@
 }
 
 <main class="text-center">
+    <div class="container">
+        <h1 class="h2 mb-4">Toplantı Katılım Listesi</h1>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Ad</th>
+                        <th scope="col">Katılım Durumu</th>
+                        <th scope="col">Detay</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var user in Model)
+                    {
+                        var isAttend = user.WillAttend == true ? "Evet" : "Hayır";
+                        var className = user.WillAttend == true ? "table-success" : "table-danger";
 
-<h1 class="h4">Toplantı Katılım Listesi</h1>
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <td>Ad</td>
-            <td>Katılım Durumu</td>
-        </tr>
-
-    </thead>
-    <tbody>
-
-            @foreach(var user in Model)
-            {
-                var isAttend = user.WillAttend == true ? "Evet" : "Hayır";
-                var className = user.WillAttend == true ? "table-success" : "table-danger";
-
-               
-
-            <tr class="@className">
-            <td> @user.Name</td>
-            <td> @isAttend</td>
-            <td>
-                <a class="btn btn-sm btn-primary" href="/meeting/details/@user.Id">Detay</a>
-            </td>
-             </tr>
-            }
-
-        
-        
-    </tbody>
-
-</table>
-<div class="card">
-    <div class="card-body">
-            <span>Katılımcı Sayısı: @ViewBag.UserCount</span>
+                        <tr class="@className">
+                            <td>@user.Name</td>
+                            <td>@isAttend</td>
+                            <td>
+                                <a class="btn btn-sm btn-primary" href="/meeting/details/@user.Id">Detay</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="card mt-4">
+            <div class="card-body">
+                <span class="lead">Katılımcı Sayısı: @ViewBag.UserCount</span>
+            </div>
+        </div>
     </div>
-</div>
 </main>

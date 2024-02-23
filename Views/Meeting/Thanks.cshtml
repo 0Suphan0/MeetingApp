@@ -1,20 +1,18 @@
 ﻿@model UserInfo;
+
 <main class="text-center">
+    <div class="container">
+        <h1 class="display-4">Toplantı Özeti</h1>
 
-<h1>Toplantı Özeti</h1>
-
-
-    @if (Model.WillAttend)
-    {
-        <p>Toplantıya sizinle birlikte @ViewBag.UserCount kişi katılıyor.</p>
-        <a class="btn btn-sm btn-outline-primary" asp-controller="Meeting" asp-action="List">Katılımcıları Listele</a>
-    }
-    else
-    {
-        <p>@Model.Name, katılmadığından dolayı üzgünüz.</p>
-        <a class="btn btn-sm btn-outline-primary" asp-controller="Meeting" asp-action="Apply">Katılım formu</a>
-
-    }
-
-
+        @if (Model.WillAttend ?? false)
+        {
+            <p class="lead">Toplantıya sizinle birlikte @ViewBag.UserCount kişi katılıyor.</p>
+            <a class="btn btn-lg btn-primary mt-3" asp-controller="Meeting" asp-action="List">Katılımcıları Listele</a>
+        }
+        else
+        {
+            <p class="lead">@Model.Name, katılmadığından dolayı üzgünüz.</p>
+            <a class="btn btn-lg btn-primary mt-3" asp-controller="Meeting" asp-action="Apply">Katılım Formu</a>
+        }
+    </div>
 </main>

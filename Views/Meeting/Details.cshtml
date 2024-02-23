@@ -4,29 +4,31 @@
     ViewBag.Title = "Başvuru Detayı";
 }
 
-@{
-    var className = Model.WillAttend == true ? "success" : "danger";
-}
-
-
 <main class="text-center">
-
-    <h1 class="h4">Başvuru Detayı</h1>
-    <p>
-        <span class="badge @((Model.WillAttend == true) ? "bg-success " : "bg-danger")">
-            @if (Model.WillAttend == true)
-        {
-            <text>Katılıyor</text>
-        }
-        else
-        {
-            <text>Katılmıyor</text>
-
-        }
-    </p>
-    <p>İsim: @Model.Name</p>
-    <p>Email: @Model.Email</p>
-    <p>Telefon: @Model.Phone</p>
-    <a asp-controller="Meeting" asp-action="List" class="btn btn-outline-@className">Katılımcı Listesi</a>
-
+    <div class="container">
+        <h1 class="h2 mb-4">Başvuru Detayı</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Katılım Durumu</h5>
+                <span class="badge bg-@((Model.WillAttend == true) ? "success" : "danger")">
+                    @if (Model.WillAttend == true)
+                    {
+                        <text>Katılıyor</text>
+                    }
+                    else
+                    {
+                        <text>Katılmıyor</text>
+                    }
+                </span>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">İsim: @Model.Name</li>
+                <li class="list-group-item">Email: @Model.Email</li>
+                <li class="list-group-item">Telefon: @Model.Phone</li>
+            </ul>
+            <div class="card-body">
+                <a asp-controller="Meeting" asp-action="List" class="btn btn-outline-@((Model.WillAttend == true) ? "success" : "danger")">Katılımcı Listesi</a>
+            </div>
+        </div>
+    </div>
 </main>
