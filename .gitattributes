@@ -1,4 +1,7 @@
-*.h linguist-detectable=false
+# ASP.NET Core dosyaları için tanımlanabilir yap
+*.cs linguist-detectable=true
+
+# Diğer dosya türleri için tanımlanabilir yapma
 *.html linguist-detectable=false
 *.scss linguist-detectable=false
 *.cc linguist-detectable=false
@@ -11,7 +14,6 @@
 *.gradle linguist-detectable=false
 *.json linguist-detectable=false
 *.plist linguist-detectable=false
-*.html linguist-detectable=false
 *.xml linguist-detectable=false
 *.xib linguist-detectable=false
 *.storyboard linguist-detectable=false
