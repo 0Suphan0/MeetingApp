@@ -1,8 +1,7 @@
-# ASP.NET Core dosyaları için tanımlanabilir yap
+# Sadece C# dosyalarını tanımlanabilir yap
 *.cs linguist-detectable=true
-*.cs linguist-language=C#
 
-# Diğer dosya türleri için dil tespitini devre dışı bırak
+# Diğer dosya türlerini devre dışı bırak
 *.html linguist-detectable=false
 *.scss linguist-detectable=false
 *.cc linguist-detectable=false
