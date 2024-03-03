@@ -29,7 +29,6 @@ The project is a web application developed using .NET Core MVC. This application
 <img src="ProjectSS/6.png" width="auto">
 <img src="ProjectSS/7.png" width="auto">
 <img src="ProjectSS/8.png" width="auto">
-<img src="ProjectSS/9.png" width="auto">
-<img src="ProjectSS/10.png" width="auto">
+
 
 
