@@ -21,13 +21,25 @@ The project is a web application developed using .NET Core MVC. This application
 
 ## Ekran Görüntüleri (Screenshots)
 
+Ürünlerin Listelenmesi:
 <img src="ProjectSS/1.png" width="auto">
+Arama kısmından ürünün aranması:
 <img src="ProjectSS/2.png" width="auto">
+Kategori kısmından ürünün filtrelenmesi:
 <img src="ProjectSS/3.png" width="auto">
+Validasyonların gösterilmesi:
 <img src="ProjectSS/4.png" width="auto">
+Yeni ürün ekleme:
 <img src="ProjectSS/5.png" width="auto">
+Yeni ürünün listelenmesi:
 <img src="ProjectSS/6.png" width="auto">
+Yeni ürünün güncellenmesi (Fiyat Bilgisinin)
 <img src="ProjectSS/7.png" width="auto">
+Güncellenmiş ürünün listelenmesi
 <img src="ProjectSS/8.png" width="auto">
+Ürün silinmek istendiğinde uyarı ekranı çıkartılması: 
+<img src="ProjectSS/9.png" width="auto">
+Ürün silindikten sonra listelenme işlemi:
+<img src="ProjectSS/10.png" width="auto">
 
 
